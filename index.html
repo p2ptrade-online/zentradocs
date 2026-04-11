@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZentraPOS Documentation</title>
+  <meta name="description" content="ZentraPOS end-user documentation for cashiers, supervisors, managers, front-of-house teams, and kitchen operators.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open navigation">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-mark">Z</div>
+      <div>
+        <h1>ZentraPOS Docs</h1>
+        <p>End-user manual</p>
+      </div>
+    </div>
+
+    <div class="sidebar-search">
+      <input id="navSearch" type="search" placeholder="Search pages..." aria-label="Search pages">
+    </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+      <a class="nav-link top-link" href="#overview">Overview</a>
+      <a class="nav-link top-link" href="#best-practice-workflow">Best-practice workflow</a>
+      
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Core sales</button>
+      <ul class="nav-group-list">
+        <li><a href="#main-pos" data-title="Main POS Home Screen">Main POS Home Screen</a></li>
+<li><a href="#quick-actions" data-title="Quick Actions Menu">Quick Actions Menu</a></li>
+<li><a href="#product-search" data-title="Product Search">Product Search</a></li>
+<li><a href="#update-cart" data-title="Update Cart Items">Update Cart Items</a></li>
+<li><a href="#product-customization" data-title="Product Customization">Product Customization</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Payments &amp; refunds</button>
+      <ul class="nav-group-list">
+        <li><a href="#payment" data-title="Payment Window">Payment Window</a></li>
+<li><a href="#refund" data-title="Refund Screen">Refund Screen</a></li>
+<li><a href="#reprint" data-title="Receipt Reprint">Receipt Reprint</a></li>
+<li><a href="#split-payment" data-title="Split Payment / Split Selection">Split Payment / Split Selection</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Promotions &amp; pricing</button>
+      <ul class="nav-group-list">
+        <li><a href="#service-charge" data-title="Service Charge Settings">Service Charge Settings</a></li>
+<li><a href="#discount-entry" data-title="Discount Entry">Discount Entry</a></li>
+<li><a href="#happy-hours" data-title="Happy Hours Discount">Happy Hours Discount</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Tables &amp; reservations</button>
+      <ul class="nav-group-list">
+        <li><a href="#table-view" data-title="Table View">Table View</a></li>
+<li><a href="#table-merge" data-title="Table Merge Mode">Table Merge Mode</a></li>
+<li><a href="#reservation-day" data-title="Reservation Management (Day View)">Reservation Management (Day View)</a></li>
+<li><a href="#table-booking" data-title="Table Booking Interface">Table Booking Interface</a></li>
+<li><a href="#reservation-calendar" data-title="Reservation Calendar View">Reservation Calendar View</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Delivery &amp; online</button>
+      <ul class="nav-group-list">
+        <li><a href="#uber-eats" data-title="Uber Eats Delivery Creation">Uber Eats Delivery Creation</a></li>
+<li><a href="#doordash" data-title="DoorDash Delivery Creation">DoorDash Delivery Creation</a></li>
+<li><a href="#online-checkout" data-title="Online Checkout">Online Checkout</a></li>
+<li><a href="#public-menu" data-title="Online Ordering (Public Menu)">Online Ordering (Public Menu)</a></li>
+<li><a href="#online-orders" data-title="Online Orders (Guest / Web Integration)">Online Orders (Guest / Web Integration)</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Customers &amp; loyalty</button>
+      <ul class="nav-group-list">
+        <li><a href="#assign-customer" data-title="Assign Customer to Sale">Assign Customer to Sale</a></li>
+<li><a href="#customer-profile" data-title="Customer Management / Customer Profile">Customer Management / Customer Profile</a></li>
+<li><a href="#customer-directory" data-title="Customer Management (Extended Profile View)">Customer Management (Extended Profile View)</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Cart management</button>
+      <ul class="nav-group-list">
+        <li><a href="#hold-current-cart" data-title="Hold Current Cart">Hold Current Cart</a></li>
+<li><a href="#held-carts" data-title="Held Carts List">Held Carts List</a></li>
+      </ul>
+    </div>
+    
+
+    <div class="nav-group">
+      <button class="nav-group-toggle" type="button">Kitchen operations</button>
+      <ul class="nav-group-list">
+        <li><a href="#kitchen-priority" data-title="Kitchen Priority Hub">Kitchen Priority Hub</a></li>
+      </ul>
+    </div>
+    
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>Static site ready for GitHub Pages.</p>
+    </div>
+  </aside>
+
+  <div class="page-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Hospitality operations manual</p>
+        <h2>ZentraPOS End User Manual</h2>
+      </div>
+      <a class="topbar-button" href="#overview">Start here</a>
+    </header>
+
+    <main class="content">
+      <section id="overview" class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Purpose of this manual</span>
+          <h2>Advanced operational guide for cashiers, supervisors, front-of-house staff, and venue managers</h2>
+          <p>This documentation explains the core sales, customer, table, refund, delivery, promotion, reservation, and kitchen workflows visible in the supplied ZentraPOS screens. It is written for end users, not developers, with a focus on what each screen does, when to use it, and what operational result to expect.</p>
+          <div class="hero-actions">
+            <a href="#main-pos" class="primary-button">Go to main POS screen</a>
+            <a href="#online-orders" class="secondary-button">See online workflows</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-grid">
+            <article class="mini-card"><h3>Audience</h3><p>Cashiers, supervisors, front-of-house staff, takeaway teams, managers, customer service, and kitchen/expo operators.</p></article><article class="mini-card"><h3>Primary goal</h3><p>Help end users understand what each screen does, when to use it, and what operational outcome to expect.</p></article><article class="mini-card"><h3>Best for</h3><p>Hospitality venues running counter service, dine-in, takeaway, reservations, delivery integrations, loyalty, and kitchen prioritization.</p></article><article class="mini-card"><h3>Hosted on GitHub Pages</h3><p>This site is static HTML/CSS/JS, so it can be deployed directly from a GitHub repository without a backend.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview-section">
+        <article class="content-card">
+          <h3>Operating principles</h3>
+          <ul class="bullet-list">
+            <li>Create the order on the main sales screen by selecting categories and products.</li>
+<li>Review the cart and totals on the right-hand panel before taking payment.</li>
+<li>Use the Quick Actions menu for exceptions and secondary workflows such as refunds, receipt reprints, held carts, and promotions.</li>
+<li>Attach a customer when loyalty, VIP treatment, account lookup, or customer history matters.</li>
+<li>Use table tools when the venue operates dine-in service or merges seating areas.</li>
+<li>Use delivery integrations when the current cart must be dispatched through a delivery partner.</li>
+<li>Use kitchen-facing notes and priority tools when preparation timing matters after the order has been placed.</li>
+          </ul>
+        </article>
+        <article class="content-card">
+          <h3>Recommended audience</h3>
+          <ul class="bullet-list">
+            <li>Cashiers and counter service staff</li>
+            <li>Front-of-house and floor teams</li>
+            <li>Shift supervisors and venue managers</li>
+            <li>Customer service and loyalty operators</li>
+            <li>Kitchen and expo teams using priority workflows</li>
+          </ul>
+        </article>
+      </section>
+
+      
+    <section id="main-pos" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Core sales</span>
+        <h2>1. Main POS Home Screen</h2>
+      </div>
+      <p class="purpose">The main POS screen is the primary workspace for cashiers and front-of-house staff. It combines category browsing, product selection, cart review, and payment entry in one place so orders can be created and completed quickly during service.</p>
+      <div class="section-media">
+        <img src="assets/images/main-pos.png" alt="Main POS Home Screen screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Left day-part rail</td><td>Switches between major menu periods such as Breakfast, Lunch, and Beverages. This helps venues present the right menu based on time of day.</td></tr>
+<tr><td>Subcategory column</td><td>Narrows the active menu into smaller groups such as Sushi, Food, or Breakfast service windows.</td></tr>
+<tr><td>Product tile grid</td><td>Large touch tiles add products rapidly. The color-coded layout is designed for speed on tablets and touch screens.</td></tr>
+<tr><td>Cart panel</td><td>Shows line items, quantities, prices, and modifiers already added to the sale.</td></tr>
+<tr><td>Totals summary</td><td>Displays subtotal, service charge, GST, discounts, and the final total before payment.</td></tr>
+<tr><td>Bottom action bar</td><td>Provides shortcut access to discounting, cart editing, hold, timers, customer tools, notes, table tools, search, and workflow actions.</td></tr>
+<tr><td>Payment buttons</td><td>Launches EFTPOS or Cash tendering directly from the order screen.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Standard takeaway, dine-in, and quick-service ordering.</li>
+<li>Rush-period order entry where staff need to add items and review totals without leaving the screen.</li>
+<li>Counter service environments where touch targets must be large and quick to use.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Always confirm the correct day-part, subcategory, and table/order type before adding items.</li>
+<li>Review the totals panel before pressing payment to catch missing modifiers, service charges, or discounts.</li>
+<li>Use dedicated cart tools for large corrections instead of trying to remember changes mentally.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="quick-actions" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Core sales</span>
+        <h2>2. Quick Actions Menu</h2>
+      </div>
+      <p class="purpose">The Quick Actions menu acts as the operations hub for tasks that sit beside normal selling. It gives staff rapid access to refunds, held carts, table tools, delivery integrations, receipt reprints, service charge settings, customer management, and promotional controls.</p>
+      <div class="section-media">
+        <img src="assets/images/quick-actions.png" alt="Quick Actions Menu screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Cart actions</td><td>Hold Cart, View Held, Assign, and Update are used while the sale is still active and needs to be paused or changed.</td></tr>
+<tr><td>Refund tools</td><td>Launches refund processing, online order review, receipt reprint, and printer-related tasks for completed sales.</td></tr>
+<tr><td>Table &amp; settings</td><td>Provides access to table view, reservations, and delivery partner order creation for dine-in venues.</td></tr>
+<tr><td>Admin actions</td><td>Contains higher-permission tools such as Service Fee, Customer, Cashier Shift, and Happy Hours.</td></tr>
+<tr><td>Online indicator</td><td>Shows device connectivity status, which is useful when diagnosing sync or integration issues.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>A cashier needs to reprint a receipt without leaving the order screen.</li>
+<li>A supervisor needs to apply service charge rules or open Happy Hours settings.</li>
+<li>Staff need to resume a held cart or process an exception during busy service.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Confirm you are opening the correct workflow before making changes, especially for refunds and promotions.</li>
+<li>Use role-based permissions for money-impacting actions such as discounts, refunds, and service charges.</li>
+<li>Add notes whenever the workflow will be resumed by a different staff member later.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="payment" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Payments &amp; refunds</span>
+        <h2>3. Payment Window</h2>
+      </div>
+      <p class="purpose">The payment window finalizes the sale. It supports multiple tender types and provides a fast tendering keypad with common denomination buttons, live tendered totals, and change calculation.</p>
+      <div class="section-media">
+        <img src="assets/images/payment.png" alt="Payment Window screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Tender tabs</td><td>Cash, Card, Card (Offline), Gift, and Debt allow the same sale to be settled through different business-approved methods.</td></tr>
+<tr><td>Tender field</td><td>Accepts the amount received from the customer and updates the change calculation.</td></tr>
+<tr><td>Denomination buttons</td><td>Speeds up cash handling by allowing common note and coin values to be tapped instead of typed.</td></tr>
+<tr><td>Numeric keypad</td><td>Supports exact entry when the customer gives an unusual amount or when partial tenders are being recorded.</td></tr>
+<tr><td>Tendered / Change summary</td><td>Shows exactly how much has been entered and how much change is due.</td></tr>
+<tr><td>Confirm Payment</td><td>Completes the sale and writes the chosen tender type into sale history and reporting.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Standard cash and card checkout.</li>
+<li>Manual card recording when offline or when an external terminal is used.</li>
+<li>Gift or debt settlement where the venue tracks an alternate payment method.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Read the amount aloud before confirming payment when customer disputes are likely.</li>
+<li>For cash, verify both the tendered amount and the change value before handing money back.</li>
+<li>Only use Card (Offline), Gift, or Debt if venue policy and permissions allow it.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="refund" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Payments &amp; refunds</span>
+        <h2>4. Refund Screen</h2>
+      </div>
+      <p class="purpose">The refund screen is used after a sale has already been completed. It targets a specific receipt, lets staff select the item quantities to return, and preserves the original payment context for audit accuracy.</p>
+      <div class="section-media">
+        <img src="assets/images/refund.png" alt="Refund Screen screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Sale reference</td><td>Displays the sale number so the operator can verify the exact transaction being refunded.</td></tr>
+<tr><td>Refund location</td><td>Supports multi-site environments where reporting or stock treatment depends on location.</td></tr>
+<tr><td>Line item refund grid</td><td>Shows original quantities, refund quantities, and line prices for precise partial refunds.</td></tr>
+<tr><td>Original payment breakdown</td><td>Displays how the customer originally paid, reducing the chance of mismatched refund methods.</td></tr>
+<tr><td>Refund method selector</td><td>Lets staff choose how the money will be returned.</td></tr>
+<tr><td>Refund summary</td><td>Calculates the refund total and any service charge refund before final confirmation.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Partial refund for one returned item from a completed sale.</li>
+<li>Full refund after a customer complaint or mistaken checkout.</li>
+<li>Manager-approved correction where stock and financial history must remain accurate.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Check sale number, items, quantities, and refund method before pressing Confirm Refund.</li>
+<li>Use partial quantity refunds when only part of the order is being returned.</li>
+<li>Follow venue policy for manager approval thresholds and refund logging.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="reprint" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Payments &amp; refunds</span>
+        <h2>5. Receipt Reprint</h2>
+      </div>
+      <p class="purpose">Receipt Reprint gives staff a quick way to recover proof of purchase after the original receipt is lost, faded, or failed to print correctly.</p>
+      <div class="section-media">
+        <img src="assets/images/reprint.png" alt="Receipt Reprint screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Recent receipts list</td><td>Shows the last receipts with date, time, tender type, and total for quick selection.</td></tr>
+<tr><td>Receipt number lookup</td><td>Lets staff retrieve a specific record when the receipt number is known.</td></tr>
+<tr><td>Receipt preview</td><td>Provides confidence before printing by showing item and total details of the selected receipt.</td></tr>
+<tr><td>Reprint button</td><td>Sends the selected receipt to the configured printer.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer requests another copy of a receipt.</li>
+<li>Printer jam or paper outage caused the original receipt not to print.</li>
+<li>Supervisor needs to verify what was sold without opening the full sale record.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use the preview to avoid printing the wrong receipt.</li>
+<li>Confirm printer selection and paper status before reprinting.</li>
+<li>For privacy-sensitive venues, only reprint when permitted by policy.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="product-search" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Core sales</span>
+        <h2>6. Product Search</h2>
+      </div>
+      <p class="purpose">Product Search is a fast retrieval tool for large or complex menus. It reduces time spent browsing by letting staff search by text, filter by category, sort results, and limit by price range.</p>
+      <div class="section-media">
+        <img src="assets/images/product-search.png" alt="Product Search screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Search bar</td><td>Performs live product lookup as staff type.</td></tr>
+<tr><td>Category filter</td><td>Restricts results to a selected menu group.</td></tr>
+<tr><td>Sort controls</td><td>Sorts by name or other configured fields, with ascending or descending order.</td></tr>
+<tr><td>Price range filters</td><td>Limits results to a known price band when staff do not remember the exact name.</td></tr>
+<tr><td>Result cards</td><td>Show product name, price, internal code, and a quick add button.</td></tr>
+<tr><td>Keyboard hints</td><td>Useful for power users on desktop or iPad keyboard setups.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Finding rarely sold items faster than browsing through subcategories.</li>
+<li>Training staff on product names and prices.</li>
+<li>Locating products that exist in a hidden or less-used subcategory.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use search when the menu is large or the item is not immediately visible.</li>
+<li>Check the product code if multiple items have similar names.</li>
+<li>Reset filters if expected results do not appear.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="service-charge" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Promotions &amp; pricing</span>
+        <h2>7. Service Charge Settings</h2>
+      </div>
+      <p class="purpose">This screen controls how surcharges or service fees are applied. It supports automatic weekend charging and manual overrides for public holidays, special events, or management exceptions.</p>
+      <div class="section-media">
+        <img src="assets/images/service-charge.png" alt="Service Charge Settings screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Weekend Auto Service Charge</td><td>Automatically applies the configured surcharge on Saturday and Sunday.</td></tr>
+<tr><td>Manual override</td><td>Allows authorized staff to force service charge on or off outside the automatic rules.</td></tr>
+<tr><td>Current status display</td><td>Shows whether the surcharge is active and the percentage currently being applied.</td></tr>
+<tr><td>Today indicator</td><td>Explains why the rule is active, such as the current day being a weekend.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Weekend surcharge management in hospitality venues.</li>
+<li>Public holiday pricing without changing every product manually.</li>
+<li>Supervisor checks whether the service fee state is active before opening service.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Align surcharge behavior with venue signage and local compliance rules.</li>
+<li>Limit manual override to supervisors or managers.</li>
+<li>Verify totals after changes so the cashier understands what customers will see.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="split-payment" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Payments &amp; refunds</span>
+        <h2>8. Split Payment / Split Selection</h2>
+      </div>
+      <p class="purpose">The split-pay workflow lets staff divide a bill between guests by selecting specific cart lines and settling only those lines first. This is more accurate than manually calculating per-person amounts.</p>
+      <div class="section-media">
+        <img src="assets/images/split-payment.png" alt="Split Payment / Split Selection screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Selection checkboxes</td><td>Mark which line items belong to the current payer.</td></tr>
+<tr><td>Split Pay button</td><td>Starts payment for the selected items only.</td></tr>
+<tr><td>Cancel Split</td><td>Returns the cart to normal mode if the selection was incorrect.</td></tr>
+<tr><td>Live totals panel</td><td>Recalculates subtotal, service charge, GST, and total for the selected portion.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Group dining where each guest pays for their own items.</li>
+<li>Separate company and personal items on one table bill.</li>
+<li>Partial payment rounds where one guest pays first and the rest later.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Confirm selected lines with the customer before proceeding.</li>
+<li>Watch how service charge and GST recalculate during split mode.</li>
+<li>Use split selection rather than manual math to reduce billing mistakes.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="table-view" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Tables &amp; reservations</span>
+        <h2>9. Table View</h2>
+      </div>
+      <p class="purpose">Table View provides a floor-plan-style interface for dine-in operations. It helps hosts and servers identify available tables, active tables, guest assignments, and floor sections at a glance.</p>
+      <div class="section-media">
+        <img src="assets/images/table-view.png" alt="Table View screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Area tabs</td><td>Switch between Floor-1, Floor-2, Outside, Leftside, Downstairs, Rooftop, and other configured seating areas.</td></tr>
+<tr><td>Table tiles</td><td>Represent physical tables with table number, chair count, guest name, and live status.</td></tr>
+<tr><td>Busy / Active indicators</td><td>Highlights tables with open orders so staff do not seat new guests by mistake.</td></tr>
+<tr><td>Merge Tables button</td><td>Starts a workflow to combine tables for large groups.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Host stand seating decisions.</li>
+<li>Server lookup of which tables already have active orders.</li>
+<li>Floor supervision during busy service.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Always verify the correct floor tab before seating guests.</li>
+<li>Use table status to avoid double seating or opening duplicate orders.</li>
+<li>Update guest names or table assignment promptly for smoother handoffs.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="table-merge" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Tables &amp; reservations</span>
+        <h2>10. Table Merge Mode</h2>
+      </div>
+      <p class="purpose">Table Merge Mode extends the normal table screen by allowing multiple tables to be combined into one service area or bill. This is especially helpful when parties expand or are relocated.</p>
+      <div class="section-media">
+        <img src="assets/images/table-merge.png" alt="Table Merge Mode screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Selected table highlights</td><td>Shows exactly which tables are being combined.</td></tr>
+<tr><td>Merge Selected</td><td>Confirms the merge once the correct tables have been chosen.</td></tr>
+<tr><td>Cancel Merge</td><td>Stops the merge if the wrong tables were selected.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Combining two adjacent tables for a larger party.</li>
+<li>Merging orders after guests shift seats.</li>
+<li>Reducing bill fragmentation during banquet or family-style service.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Double-check all selected tables before saving the merge.</li>
+<li>Communicate merged table changes to floor staff so service stays coordinated.</li>
+<li>Test how merged billing behaves in your venue before using it during peak periods.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="uber-eats" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Delivery &amp; online</span>
+        <h2>11. Uber Eats Delivery Creation</h2>
+      </div>
+      <p class="purpose">This screen converts the current POS cart into an Uber Eats delivery request. The cart contents are reused and staff only need to add delivery-specific customer and drop-off information.</p>
+      <div class="section-media">
+        <img src="assets/images/uber-eats.png" alt="Uber Eats Delivery Creation screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Cart panel</td><td>Shows the items and quantities being sent to the delivery workflow.</td></tr>
+<tr><td>Customer name and notes</td><td>Captures the recipient name and operational comments for the delivery.</td></tr>
+<tr><td>Drop-off / pickup phone fields</td><td>Supports coordination between store, courier, and customer.</td></tr>
+<tr><td>Address fields</td><td>Collect unit, house number, and street address, often with validation.</td></tr>
+<tr><td>Create button</td><td>Submits the delivery request once required fields are complete.</td></tr>
+<tr><td>Recent orders area</td><td>Provides visibility into previously created Uber Eats orders.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Store staff create delivery directly from POS instead of switching apps.</li>
+<li>Manually dispatching a house-built cart via Uber Eats.</li>
+<li>Reusing an existing in-store order for partner delivery fulfillment.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Validate address and phone fields carefully before submission.</li>
+<li>Use notes for gate codes, pickup timing, or special courier instructions.</li>
+<li>Check recent orders if staff are unsure whether the request was already created.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="assign-customer" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Customers &amp; loyalty</span>
+        <h2>12. Assign Customer to Sale</h2>
+      </div>
+      <p class="purpose">This screen links an active cart to an existing customer profile. It combines fast search with a portfolio preview so staff can confirm loyalty points, reward eligibility, and customer identity before attaching the sale.</p>
+      <div class="section-media">
+        <img src="assets/images/assign-customer.png" alt="Assign Customer to Sale screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Search filters</td><td>Find customers by name, phone, email, or search key.</td></tr>
+<tr><td>Matched customer list</td><td>Displays candidate records based on the search.</td></tr>
+<tr><td>Customer portfolio</td><td>Shows selected customer details, points, and profile summary.</td></tr>
+<tr><td>Product loyalty rewards</td><td>Highlights reward progress and redeemable items.</td></tr>
+<tr><td>QR code</td><td>Acts as a scannable customer or loyalty identifier depending on configuration.</td></tr>
+<tr><td>Sales history</td><td>Shows prior receipts and spend activity before assignment.</td></tr>
+<tr><td>Assign to Sale button</td><td>Attaches the selected customer to the current cart.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer wants loyalty points added to the purchase.</li>
+<li>VIP or repeat-customer service where history matters.</li>
+<li>Reward redemption before checkout.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Confirm phone or email with the customer to avoid assigning the wrong profile.</li>
+<li>Review reward availability before promising a redemption.</li>
+<li>Attach the profile before payment so the transaction posts correctly to loyalty history.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="update-cart" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Core sales</span>
+        <h2>13. Update Cart Items</h2>
+      </div>
+      <p class="purpose">Update Cart Items provides a focused editing view for current order lines. It is especially useful when the cart has many items and staff need to change quantities or remove lines without working directly in the busy main order screen.</p>
+      <div class="section-media">
+        <img src="assets/images/update-cart.png" alt="Update Cart Items screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Item list</td><td>Displays each active line in the cart.</td></tr>
+<tr><td>Quantity fields</td><td>Allows fast correction of line quantities.</td></tr>
+<tr><td>Delete icons</td><td>Removes individual lines completely.</td></tr>
+<tr><td>Done button</td><td>Saves changes and returns to the main order screen.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer changes quantities after the order has already been entered.</li>
+<li>Cashier needs a clean edit screen during a busy queue.</li>
+<li>Correcting accidental double taps on product tiles.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Read the updated cart back to the customer before proceeding to payment.</li>
+<li>Use delete rather than setting quantity to zero if your workflow expects clean lines.</li>
+<li>Recheck totals after large quantity changes.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="customer-profile" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Customers &amp; loyalty</span>
+        <h2>14. Customer Management / Customer Profile</h2>
+      </div>
+      <p class="purpose">This page is the main customer relationship workspace. It combines search, results, profile details, address data, loyalty balances, discount entitlements, status badges, and sales history in one management view.</p>
+      <div class="section-media">
+        <img src="assets/images/customer-profile.png" alt="Customer Management / Customer Profile screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Quick Search panel</td><td>Searches by name, phone, email, or code.</td></tr>
+<tr><td>Create Customer button</td><td>Opens the workflow to add a new customer record.</td></tr>
+<tr><td>Results list</td><td>Shows matching customers with badges such as VIP.</td></tr>
+<tr><td>Profile header</td><td>Displays the selected customer&#x27;s primary identifiers and tags.</td></tr>
+<tr><td>Address card</td><td>Stores location details useful for contact or delivery context.</td></tr>
+<tr><td>Points / Discount / Status cards</td><td>Summarize loyalty balance, discount entitlement, and service tier.</td></tr>
+<tr><td>Sales history table</td><td>Shows previous receipts and total spend to support customer service.</td></tr>
+<tr><td>Edit / Delete buttons</td><td>Lets authorized staff maintain the customer record.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Managers reviewing VIP customer history.</li>
+<li>Front desk staff confirming discount eligibility or loyalty balance.</li>
+<li>Customer service follow-up after a complaint or special request.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Protect editing and deletion with appropriate permissions.</li>
+<li>Keep customer records clean and standardized for accurate search results.</li>
+<li>Use sales history when verifying service recovery or reward disputes.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="product-customization" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Core sales</span>
+        <h2>15. Product Customization</h2>
+      </div>
+      <p class="purpose">The customization dialog applies modifiers and notes to a specific product line. It is essential for hospitality venues where the same base item can be sold with add-ons, substitutions, milk options, or kitchen instructions.</p>
+      <div class="section-media">
+        <img src="assets/images/product-customization.png" alt="Product Customization screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Product title</td><td>Confirms which product is being edited.</td></tr>
+<tr><td>Force Offline mode</td><td>Allows the dialog to rely on cached data when live synchronization is unavailable.</td></tr>
+<tr><td>Modifier group tabs</td><td>Organize modifiers by relevant product type, such as Coffee/Tea.</td></tr>
+<tr><td>Modifier buttons</td><td>Adds optional extras or substitutions, including chargeable add-ons.</td></tr>
+<tr><td>Special Instructions / Notes</td><td>Captures free-text kitchen or preparation instructions.</td></tr>
+<tr><td>Save Changes</td><td>Writes modifiers and notes back to the cart line.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer requests almond milk, extra sugar, or a paid mix-in.</li>
+<li>Kitchen needs a typed note such as extra hot or no onion.</li>
+<li>Venue is operating semi-offline and still needs cached modifier access.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Capture modifier changes before payment whenever possible.</li>
+<li>Use notes for genuine prep instructions, not internal staff reminders.</li>
+<li>Ensure paid add-ons appear in the cart before completing the order.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="discount-entry" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Promotions &amp; pricing</span>
+        <h2>16. Discount Entry</h2>
+      </div>
+      <p class="purpose">Discount Entry applies a percentage-based reduction to the active cart. It supports manual keypad entry as well as quick-pick percentage buttons for common discount levels.</p>
+      <div class="section-media">
+        <img src="assets/images/discount-entry.png" alt="Discount Entry screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Large percentage display</td><td>Shows the discount currently selected.</td></tr>
+<tr><td>Numeric keypad</td><td>Allows exact percentage entry.</td></tr>
+<tr><td>Preset discount buttons</td><td>Applies common values such as 5%, 10%, 15%, 25%, or 50%.</td></tr>
+<tr><td>Backspace</td><td>Corrects input mistakes before applying the discount.</td></tr>
+<tr><td>Go button</td><td>Applies the chosen discount to the order.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Manager-approved goodwill discount after a service issue.</li>
+<li>Staff meal or promo percentage application.</li>
+<li>Flexible discounting where a fixed amount is not suitable.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Always follow venue policy for who may apply discounts.</li>
+<li>Check the totals panel afterward to confirm the expected reduction.</li>
+<li>Record the reason for exceptional discounts if policy requires it.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="doordash" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Delivery &amp; online</span>
+        <h2>17. DoorDash Delivery Creation</h2>
+      </div>
+      <p class="purpose">This workflow mirrors the Uber Eats screen but sends the active POS cart through the DoorDash delivery integration. It is designed for store-managed delivery creation using existing cart contents.</p>
+      <div class="section-media">
+        <img src="assets/images/doordash.png" alt="DoorDash Delivery Creation screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Cart overview</td><td>Shows exactly which items will be sent to DoorDash.</td></tr>
+<tr><td>Customer &amp; drop-off form</td><td>Collects the receiving customer&#x27;s contact details.</td></tr>
+<tr><td>Delivery notes field</td><td>Captures driver instructions or access details.</td></tr>
+<tr><td>Phone fields</td><td>Separates drop-off and pickup numbers for operational communication.</td></tr>
+<tr><td>Address entry</td><td>Validates the destination for dispatch.</td></tr>
+<tr><td>Create button</td><td>Submits the delivery request once validation is complete.</td></tr>
+<tr><td>Recent orders area</td><td>Keeps recent delivery activity visible to staff.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Store creates delivery directly inside POS without re-entering items elsewhere.</li>
+<li>Staff need dispatch traceability inside the same workflow used for normal sales.</li>
+<li>House-order cart is being converted into a partner-delivered order.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Do not submit until the address and phone information is complete.</li>
+<li>Use notes for building access, gate codes, or safe drop instructions.</li>
+<li>If Create remains disabled, check required fields and address validation messages.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="happy-hours" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Promotions &amp; pricing</span>
+        <h2>18. Happy Hours Discount</h2>
+      </div>
+      <p class="purpose">Happy Hours provides a quick way to enable a temporary promotional discount across sales without editing product prices one by one. A toggle turns the mode on, and a slider sets the percentage.</p>
+      <div class="section-media">
+        <img src="assets/images/happy-hours.png" alt="Happy Hours Discount screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Enable Happy Hours toggle</td><td>Turns the promotion mode on or off.</td></tr>
+<tr><td>Discount value badge</td><td>Displays the currently configured percentage.</td></tr>
+<tr><td>Slider</td><td>Adjusts the active discount interactively.</td></tr>
+<tr><td>Save button</td><td>Commits the temporary pricing rule.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Afternoon happy hour or off-peak specials.</li>
+<li>Short-lived manager promotions during quiet periods.</li>
+<li>Time-bound discounting that should be easy to switch on and off.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Communicate active Happy Hours promotions clearly to staff and customers.</li>
+<li>Confirm discount behavior in the totals panel after saving.</li>
+<li>Turn off the promotion promptly when the window ends.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="hold-current-cart" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Cart management</span>
+        <h2>19. Hold Current Cart</h2>
+      </div>
+      <p class="purpose">Holding a cart pauses an in-progress order and stores it for later retrieval without losing items, totals, or contextual information. This is essential when customers step away or cannot pay immediately.</p>
+      <div class="section-media">
+        <img src="assets/images/hold-current-cart.png" alt="Hold Current Cart screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Cart summary</td><td>Shows items, order type, floor, customer assignment, and total before the hold is saved.</td></tr>
+<tr><td>Takeaway notice</td><td>Explains the order context being preserved.</td></tr>
+<tr><td>Notes field</td><td>Lets staff record why the cart is being held.</td></tr>
+<tr><td>Hold Cart button</td><td>Stores the sale into held-cart storage for later recovery.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer needs time to decide or return to pay later.</li>
+<li>Takeaway order is waiting for confirmation.</li>
+<li>Cashier must park a sale to serve the next customer.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use clear notes so another staff member can understand the hold reason later.</li>
+<li>Check whether the customer profile or table assignment should be attached before holding.</li>
+<li>Avoid leaving held carts unmanaged for long periods without venue policy.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="held-carts" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Cart management</span>
+        <h2>20. Held Carts List</h2>
+      </div>
+      <p class="purpose">The Held Carts list is the recovery center for paused sales. Each card gives enough detail for staff to identify the correct order and either resume, refresh, or delete it.</p>
+      <div class="section-media">
+        <img src="assets/images/held-carts.png" alt="Held Carts List screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Held cart cards</td><td>Show hold number, operator, timestamp, item count, value, order type, floor, and notes.</td></tr>
+<tr><td>Delete</td><td>Removes an unwanted held cart.</td></tr>
+<tr><td>Re-hold</td><td>Refreshes or updates the hold state.</td></tr>
+<tr><td>Resume Cart</td><td>Restores the held sale to the live ordering workflow.</td></tr>
+<tr><td>Notes display</td><td>Preserves operational context entered at the time of hold.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Returning customer wants to continue a parked sale.</li>
+<li>Shift handover where a later cashier must resume the order.</li>
+<li>Phone interruption or queue management during peak periods.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Confirm the correct cart before resuming it to avoid cross-customer mistakes.</li>
+<li>Delete stale or test holds according to venue policy.</li>
+<li>Use notes consistently for all held sales.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="kitchen-priority" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Kitchen operations</span>
+        <h2>21. Kitchen Priority Hub</h2>
+      </div>
+      <p class="purpose">Kitchen Priority Hub is a production-management screen for urgent order handling. It groups orders by state, highlights priority jobs, supports kitchen notes, and helps kitchen or expo teams coordinate prep flow.</p>
+      <div class="section-media">
+        <img src="assets/images/kitchen-priority.png" alt="Kitchen Priority Hub screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Search bar</td><td>Finds orders by order number or internal identifier.</td></tr>
+<tr><td>Status counters</td><td>Summarize new, preparing, priority, and done orders.</td></tr>
+<tr><td>Order cards</td><td>Display order number, priority level, table or order type, timestamp, and notes.</td></tr>
+<tr><td>Kitchen note field</td><td>Allows kitchen or expo staff to add operational notes.</td></tr>
+<tr><td>FIRED UP action</td><td>Likely acknowledges or advances an order into active preparation.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Urgent orders need to be surfaced above the normal queue.</li>
+<li>Front-of-house passes timing information to the kitchen.</li>
+<li>Expo team tracks which jobs are new, preparing, priority, or complete.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use concise, actionable notes that kitchen staff can understand immediately.</li>
+<li>Reserve priority status for genuinely urgent orders to keep the queue credible.</li>
+<li>Confirm order identifiers before updating status or notes.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="customer-directory" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Customers &amp; loyalty</span>
+        <h2>22. Customer Management (Extended Profile View)</h2>
+      </div>
+      <p class="purpose">This extended customer management view exposes the same profile area in a way that is suited to deeper review and maintenance. It is useful when staff need more than quick assignment and must manage full customer records.</p>
+      <div class="section-media">
+        <img src="assets/images/customer-directory.png" alt="Customer Management (Extended Profile View) screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Search and result pane</td><td>Finds customers and loads a matching profile without leaving the workspace.</td></tr>
+<tr><td>Profile header badges</td><td>Shows VIP, hidden, and other profile labels that affect service decisions.</td></tr>
+<tr><td>Address and contact data</td><td>Supports delivery follow-up, customer recognition, and data validation.</td></tr>
+<tr><td>Points / Discount / Status cards</td><td>Summarize loyalty and entitlement information at a glance.</td></tr>
+<tr><td>Sales history viewer</td><td>Provides a transaction trail for support, loyalty disputes, or VIP treatment.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer asks about points balance or past purchases.</li>
+<li>Manager reviews profile status and discount eligibility.</li>
+<li>Staff clean up customer data after registration or loyalty sign-up.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Standardize customer names, phone numbers, and emails for easier search matching.</li>
+<li>Review status and discount cards before granting benefits.</li>
+<li>Use edit and delete only for authorized data management.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="reservation-day" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Tables &amp; reservations</span>
+        <h2>23. Reservation Management (Day View)</h2>
+      </div>
+      <p class="purpose">Day View shows reservations on a timeline for a selected date. It helps hosts and floor staff see table occupancy by time slot, inspect booking details, and perform immediate actions such as check-in, reschedule, cancel, or notification.</p>
+      <div class="section-media">
+        <img src="assets/images/reservation-day.png" alt="Reservation Management (Day View) screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Timeline calendar</td><td>Displays reservations by hour so staff can visualize overlaps and gaps.</td></tr>
+<tr><td>Upcoming reservations panel</td><td>Lists near-term bookings for quick access.</td></tr>
+<tr><td>Booking search fields</td><td>Find reservations by booking reference or PIN.</td></tr>
+<tr><td>Booking detail modal</td><td>Shows customer, phone, table, floor, party size, status, and booking times.</td></tr>
+<tr><td>Action buttons</td><td>Support Reschedule, Cancel Reservation, Check In, and Send Notification.</td></tr>
+<tr><td>Day / Week / Month controls</td><td>Switch between different reservation planning views.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Host checks guests in when they arrive.</li>
+<li>Manager identifies open slots during a busy day.</li>
+<li>Staff reschedules or cancels a booking after a customer call.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use the day timeline during service because it shows exact booking overlap by hour.</li>
+<li>Confirm the reservation reference and table before checking guests in.</li>
+<li>Send notifications when the venue uses automated reminder or confirmation workflows.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="online-checkout" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Delivery &amp; online</span>
+        <h2>24. Online Checkout</h2>
+      </div>
+      <p class="purpose">Online Checkout is the customer-facing final review and payment step for web orders. It summarizes order type, table number or delivery method, line items, tax, and the final amount before the user proceeds to payment.</p>
+      <div class="section-media">
+        <img src="assets/images/online-checkout.png" alt="Online Checkout screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Order Type selector</td><td>Lets the customer choose Delivery, Pickup, or Dine-in where supported.</td></tr>
+<tr><td>Table number field</td><td>Required for dine-in or QR ordering flows that must attach the order to a table.</td></tr>
+<tr><td>Order summary</td><td>Lists items, quantities, line totals, subtotal, tax, and final total.</td></tr>
+<tr><td>Proceed to Payment button</td><td>Moves the customer into the payment gateway or final confirmation step.</td></tr>
+<tr><td>Store footer details</td><td>Shows business contact information and service hours for reassurance.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Guest completes an online order before arriving.</li>
+<li>Dine-in QR ordering where the customer must state their table.</li>
+<li>Pickup and delivery web checkout from a public menu.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Ensure the order type matches how the venue will fulfill the order.</li>
+<li>For dine-in, verify the table number is correct to avoid service confusion.</li>
+<li>Clearly display tax and service charges before payment to reduce disputes.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="public-menu" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Delivery &amp; online</span>
+        <h2>25. Online Ordering (Public Menu)</h2>
+      </div>
+      <p class="purpose">This is the public-facing digital menu used by customers to browse categories, search items, add products to cart, and begin an online order from mobile or desktop devices.</p>
+      <div class="section-media">
+        <img src="assets/images/public-menu.png" alt="Online Ordering (Public Menu) screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Category pills</td><td>Switch between public menu groups such as Top Picks, Breakfast, Weekend, Lunch, and Beverages.</td></tr>
+<tr><td>Subcategory pills</td><td>Further narrow the active menu into smaller public-facing groups.</td></tr>
+<tr><td>Search bar</td><td>Lets customers search for dishes without browsing the full menu.</td></tr>
+<tr><td>Product cards</td><td>Show image, item name, short description, price, and add-to-cart action.</td></tr>
+<tr><td>Cart indicator</td><td>Shows the live number of items in the customer&#x27;s cart.</td></tr>
+<tr><td>Promotional banner</td><td>Highlights featured campaigns, hours, or hero products.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer browsing menu before visiting the venue.</li>
+<li>Takeaway or delivery ordering from a phone.</li>
+<li>Self-service ordering through a web link or QR code.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Keep public menu categories clear and easy to understand.</li>
+<li>Use images and short descriptions for conversion, but ensure pricing stays accurate.</li>
+<li>Make sure store open hours and ordering availability are visible.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="table-booking" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Tables &amp; reservations</span>
+        <h2>26. Table Booking Interface</h2>
+      </div>
+      <p class="purpose">This customer-facing booking page allows guests to select a date, time, floor, and table before submitting a reservation. It combines booking inputs with venue details and available-table visibility.</p>
+      <div class="section-media">
+        <img src="assets/images/table-booking.png" alt="Table Booking Interface screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Floor tabs</td><td>Switch available seating areas such as Floor-1, Outside, or Rooftop.</td></tr>
+<tr><td>Pick Date &amp; Time</td><td>Opens the reservation time-slot selector.</td></tr>
+<tr><td>Booking form fields</td><td>Collect name, phone, email, party size, and special request information.</td></tr>
+<tr><td>Table details panel</td><td>Shows selected table number, capacity, type, accessibility, and notable features.</td></tr>
+<tr><td>Available tables grid</td><td>Visualizes bookable tables for the chosen date and time.</td></tr>
+<tr><td>Feature notes</td><td>Can describe views, accessibility, QR ordering, or seating characteristics.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Customer self-books a table on the venue website.</li>
+<li>Reception staff uses the page while speaking to a customer by phone.</li>
+<li>Venue promotes premium seating areas with distinct features.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Require phone and party size to reduce invalid bookings.</li>
+<li>Use table details to help guests choose appropriately sized seating.</li>
+<li>Keep availability accurate so customers are not offered already booked tables.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="reservation-calendar" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Tables &amp; reservations</span>
+        <h2>27. Reservation Calendar View</h2>
+      </div>
+      <p class="purpose">Calendar View gives staff and managers a high-level monthly overview of reservation demand. It is best for spotting busy dates, reviewing future bookings, and planning staffing or marketing activity.</p>
+      <div class="section-media">
+        <img src="assets/images/reservation-calendar.png" alt="Reservation Calendar View screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Month grid</td><td>Displays bookings by date across the selected month.</td></tr>
+<tr><td>Date navigation</td><td>Lets staff move backward or forward through calendar periods.</td></tr>
+<tr><td>Reservation detail modal</td><td>Shows selected booking details when a calendar entry is clicked.</td></tr>
+<tr><td>All / Today filters</td><td>Help operators focus on the relevant reservation subset.</td></tr>
+<tr><td>Notification controls</td><td>Support communication with customers from within the reservation workflow.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Manager reviews demand trends across the month.</li>
+<li>Front desk checks how full upcoming weekends are.</li>
+<li>Venue plans staffing or promotional activity around reservation load.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use month view for planning, then switch to day view for service execution.</li>
+<li>Review high-demand days in advance to prevent overbooking.</li>
+<li>Use filters to keep the calendar manageable if the venue has many reservations.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+    <section id="online-orders" class="doc-section">
+      <div class="section-header">
+        <span class="eyebrow">Delivery &amp; online</span>
+        <h2>28. Online Orders (Guest / Web Integration)</h2>
+      </div>
+      <p class="purpose">This page centralizes web or guest-originated orders that still need action. Staff can inspect order details, load a web order into the POS cart, or process the order directly from the integration list.</p>
+      <div class="section-media">
+        <img src="assets/images/online-orders.png" alt="Online Orders (Guest / Web Integration) screenshot" loading="lazy">
+      </div>
+      <div class="section-grid">
+        <article class="content-card">
+          <h3>Functions and controls</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Area / control</th><th>Detailed function</th></tr></thead>
+              <tbody>
+                <tr><td>Pending / Completed tabs</td><td>Separate orders requiring action from historical orders.</td></tr>
+<tr><td>Order cards</td><td>Display order ID, date/time, order type, table or address, item count, and total.</td></tr>
+<tr><td>View Items / Hide Items</td><td>Expand or collapse the item-level detail for each online order.</td></tr>
+<tr><td>Load to Cart</td><td>Pulls the online order into the live POS cart for in-store processing.</td></tr>
+<tr><td>Process Order</td><td>Advances the order to the next operational stage.</td></tr>
+<tr><td>Customer details</td><td>Shows the name, email, and destination context for validation.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card">
+          <h3>Typical use cases</h3>
+          <ul class="bullet-list">
+            <li>Staff manage incoming QR, guest, or website orders without switching systems.</li>
+<li>A web order needs to be reviewed before production or handoff.</li>
+<li>Operator wants to convert an online order into a live POS workflow.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="content-card guidance-card">
+        <h3>Operational guidance</h3>
+        <ul class="bullet-list">
+          <li>Use Pending view as the operational queue that still needs action.</li>
+<li>Confirm whether the order should be loaded to cart or processed directly according to venue workflow.</li>
+<li>Review customer details and destination information before actioning the order.</li>
+        </ul>
+      </article>
+    </section>
+    
+
+      <section id="best-practice-workflow" class="doc-section">
+        <div class="section-header">
+          <span class="eyebrow">Operations checklist</span>
+          <h2>Best-practice workflow summary</h2>
+        </div>
+        <article class="content-card">
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Checkpoint</th><th>Why it matters</th></tr></thead>
+              <tbody>
+                <tr><td>Before adding items</td><td>Verify the correct day-part, table, or order type is selected.</td></tr>
+<tr><td>Before taking payment</td><td>Review subtotal, discounts, service charge, GST, and total.</td></tr>
+<tr><td>Before assigning loyalty</td><td>Confirm the customer profile and any redeemable rewards.</td></tr>
+<tr><td>Before using discount or Happy Hours</td><td>Check venue policy and required manager permissions.</td></tr>
+<tr><td>Before refunding</td><td>Match the original sale, payment method, and exact quantities.</td></tr>
+<tr><td>Before sending delivery orders</td><td>Validate customer name, phone, and address fields.</td></tr>
+<tr><td>Before merging tables</td><td>Double-check the correct tables are selected to avoid billing confusion.</td></tr>
+<tr><td>Before resuming a held cart</td><td>Confirm it belongs to the current customer to prevent cross-service mistakes.</td></tr>
+<tr><td>Before firing priority kitchen work</td><td>Ensure order notes are clear and actionable.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        <article class="content-card notice-card">
+          <h3>Configuration note</h3>
+          <p>Site-specific configuration, permissions, integrations, tax rules, and naming may vary between tenants or locations. Pair this manual with venue-specific policy for refunds, promotions, service charges, reservations, and cash handling.</p>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <p>Built for GitHub Pages. Update <code>index.html</code>, <code>styles.css</code>, and the images inside <code>assets/images</code> to keep the documentation current.</p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img id="lightboxImage" alt="Expanded screenshot">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
