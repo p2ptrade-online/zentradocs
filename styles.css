@@ -477,11 +477,4 @@ tbody td:first-child{
   color: #00e08a !important;
 }
 
-/* Underline */
-.logo-underline {
-  width: 140px;
-  height: 6px;
-  background: linear-gradient(90deg, #00e08a, #00c874);
-  border-radius: 6px;
-  margin-top: 8px;
-}
+
