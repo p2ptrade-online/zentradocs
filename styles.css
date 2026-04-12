@@ -457,3 +457,43 @@ tbody td:first-child{
   font-size: 13px;
   color: #64748b;
 }
+/* Logo container */
+.logo-text {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+/* White part */
+.logo-main {
+  color: #ffffff;
+}
+
+/* Green POS */
+.logo-accent {
+  color: #00d084; /* nice modern green */
+}
+
+/* Underline bar */
+.logo-underline {
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(90deg, #00d084, #00b86b);
+  border-radius: 6px;
+  margin: 8px 0 18px 0;
+}
+
+/* Subtitle */
+.sidebar-subtitle h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #e6ecff;
+}
+
+.sidebar-subtitle p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
